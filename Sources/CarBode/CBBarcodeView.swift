@@ -135,7 +135,7 @@ private extension UIImage {
         newSize.width = floor(newSize.width)
         newSize.height = floor(newSize.height)
 
-        UIGraphicsBeginImageContextWithOptions(newSize, false, self.scale)
+        UIGraphicsImageRenderer(size: newSize)
         if let context = UIGraphicsGetCurrentContext() {
             context.translateBy(x: newSize.width / 2, y: newSize.height / 2)
             context.rotate(by: CGFloat(radians))
